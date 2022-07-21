@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+ /* reset no css do site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Roboto, sans-serif;
+}
+
+ /* cores já selecionadas para usar no site*/
+:root{
+    --orange: #f78b00;
+    --blue: #00285f;
+    --gray: #ededed;
+}
+
+ /* efeitos para por no body*/
+html body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+ /* efeitos relacionado ao header*/
+header{
+    width: 100%;
+    height: 500px;
+    background: var(--orange);
+}
+
+ /* efeitos relacionado ao elemento content*/
+.content{
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+ /* efeitos relacionado a barra de navegação*/
+nav{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ /* efeito relacionado a logo marca*/
+.brand{
+    font-size: 24px;
+    color: var(--blue);
+    cursor: pointer;
+}
+nav ul{
+     /* aqui definimos os botões ficam lado a lado*/
+    display: flex;
+    flex-direction: row;
+}
+
+ /* aqui retira as bolinhas, deixa um espaço e faz o cursor pointer ficar ativo*/
+nav ul li{
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ /* aqui retiramos os sublinhados e mudamos as cores das letrasdos 3 botoes catalogo, about. feature*/
+nav ul li a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+ /*aqui ao passar o mouse por cima dos 3 botoes a cor fica mais clara */
+nav ul li a:hover{
+    color: #00285f83;
+}
+ /* aqui ficam os efeitos do botão LOGIN*/
+nav ul button{
+    border: 1px solid var(--blue);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--blue);
+    font-weight: bold;
+    border-radius: 4px;
+}
+ /* efeito especial de troca de cor no botao de login*/
+nav ul button:hover{
+    transition: background, color 0.6s;
+    background: var(--blue);
+    color: white;
+}
+/* efeitos relacioando ao testo e a parte azul da home do site*/
+.content .header-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    background: var(--blue);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+/* aqui é o tratamento da imagem da página principal*/
+.header-block img{
+    width: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+.header-block .text{
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+}
+
+
+/* deixa a cor do texto dentro do azul em branco*/
+.header-block .text h2{
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
+
+/*edição do css do paragrafo no html*/
+.header-block .text p{
+    max-width: 280px;
+    color: white;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+}
+
+/* abaixo é o catalogo*/
+
+section .catalog{
+    width: 100vw;
+    padding: 100px;
+}
+
+/* aqui foi tratado a barra de SEARCH */
+section .filter-card{
+    width: 980px;
+    height: 150px;
+    background: var(--gray);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input{
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+/*aqui tratamos o botao de procura*/
+.search-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover{
+    background: #ededed;
+    color: var(--orange);
+}
+
+/*aqui deu uma separada da parte de cima do site com o botao de pesquisa no meio*/
+.title-wrapper-catalog{
+    margin-top: 200px;
+    padding-bottom: 20px;
+}
+
+/*nesta parte criamos os cards de 3 em 3*/
+section .card-wrapper{
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+
+/*esta parte deixa o fundo cinza nos carros e alinha tudo*/
+section .card-item{
+    height: 400px;
+    background: var(--gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*aqui centraliza os botoes dentro dos cards de carro o "i whant this" */
+.card-content{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*aqui mexe no tamanho das fotos dos cards, nos carros pelo menos*/
+.card-item img{
+    width: 85%;
+}
+
+.card-item h4{
+    width: 90%;
+}
+
+
+/*aqui mexe no texto abaixo do carro, cor, tamanho e tipo de letra*/
+.card-item p{
+    width: 90%;
+    font-style: italic;
+    color: #00000070;
+}
+
+/*aqui mexemos no tamanho-cor-arredondamento do botao do card*/
+.card-item button{
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: var(--blue);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/*aqui é o efeito especial ao passar o mouse nos botoes dos carros*/
+.card-item button:hover{
+    background: #cdc6c6;
+    color: var(--blue);
+}
+
+/*aqui começa a parte do "ABOUT"*/
+
+.about{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+/*aqui é a edição da parte cinzado about e o texto*/
+.about-content{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: #dedede3b;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*aqui editamos a imagem cinza do about onde tem simbolo de um carro, e lâmpada*/
+.left{
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    background: #000000a1;
+    border-radius: 8px;
+}
+
+.right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+/*aqui foi editado o texto em h3 (o titulo abaixo doabout)*/
+.right h3{
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/*aqui foi editado o texto abaixo do titulo do about*/
+.right p{
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/*aqui começam as features(imagens do globo em preto e branco)*/
+
+/*neste comando alinhei os glbos ao centro*/
+.features{
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.title-wrapper-features{
+    padding: 20px 0px;
+
+}
+
+/*aqui editamos a parte branca onde vai ficar o card do globo preto e branco*/
+.feature-card-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px,1fr));
+    grid: gap 30px;
+}
+
+.feature-card-item{
+    max-width: 420px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #dedede3b;
+    border-radius: 4px;
+}
+
+/*aqui mexemos no texto abaixo do titulo das fotos do globo preto e branco*/
+.feature-text-content{
+    max-width: 60%;
+    margin: 5px;
+}
+
+/*aqui mexemos no tamanho da foto do card globo preto e branco*/
+.feature-card-item img{
+    width: 64px;
+    height: 64px;
+}
+
+/*Aqui vamos editar a parte do Footer(parte de baixo)*/
+
+footer{
+    width: 100%;
+    height: 250px;
+}
+
+/*aqui deixamos o footer(parte de baixo na cor laranja */
+footer .main{
+    width: 100%;
+    height: 200px;
+    background: var(--orange);
+    padding: 20px 10px;
+}
+
+.footer-links{
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/*Aqui deixo as letras do footer brancas*/
+.footer-company, .footer-rental, .footer-contact, .footer-social{
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4{
+    margin-bottom: 10px;
+
+}
+
+.footer-links h6{
+    margin-bottom: 8px;
+}
+
+.footer-social img{
+    width: 32px;
+    height: 32px;
+}
+
+footer .last{
+    width: 100%;
+    height: 50px;
+    background: var(--blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Area de responsividade*/
+
+@media (max-width: 576px){
+    nav ul li{
+        display: none;
+
+    }
+    .header-block img{
+        width: 70%;
+        position: absolute;
+        right: 16%;
+        top: 30%;
+    }
+
+    .header-block .text{
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+    }
+
+    section .filter-card{
+        width: 390px;
+        padding: 0px 10px;
+    }
+
+    .search-input{
+        max-width: 700px;
+        min-width: 240px;
+    }
+
+    .search-button{
+        max-width: 150px;
+        min-width: 80px;
+
+    }
+
+    .about{
+        margin-top: 100px;
+    }
+
+    .title-wrapper-about{
+        margin-bottom: 20px;
+    }
+    .about-content{
+        flex-direction: column;
+        height: 100%;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 90%;
+    }
+
+    .right p{
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+    
+    .features{
+        height: 100%;
+    }
+
+    .feature-card-block{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        height: 100%;
+    }
+    footer .main{
+        height: 100%;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        padding-left: 10%;
+    }
+}
